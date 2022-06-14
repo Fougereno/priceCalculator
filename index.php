@@ -38,14 +38,14 @@
                    <p class="price__p">Этажность дома</p>
                    <div class="price__wrapinner">
                        <input type="text" class="price__input price__input_170w">
-                       <input type="range" class="price__range">
+                       <input type="range"  type="range" value="70" min="0" max="100" oninput="rangenumber.value=value" class="price__range">
                    </div>
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Этаж квартиры</p>
                    <div class="price__wrapinner">
                        <input type="text" class="price__input price__input_170w">
-                       <input type="range" class="price__range">
+                       <input type="range"  type="range" value="70" min="0" max="100" oninput="rangenumber.value=value" class="price__range">
                    </div>
                </div>
                <div class="price__wraprow">
@@ -56,14 +56,14 @@
                    <p class="price__p">Общая площадь</p>
                    <div class="price__wrapinner">
                        <input type="text" class="price__input price__input_120w">
-                       <input type="range" class="price__range">
+                       <input type="range"  type="range" value="70" min="0" max="100" oninput="rangenumber.value=value" class="price__range">
                    </div>
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Площадь кухни</p>
                    <div class="price__wrapinner">
                        <input type="text" class="price__input price__input_120w">
-                       <input type="range" class="price__range styled-slider slider-progress">
+                       <input type="range"  type="range" value="70" min="0" max="100" oninput="rangenumber.value=value" class="price__range">
                    </div>
                </div>
                <div class="price__wraprow">
@@ -105,11 +105,11 @@
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Первоначальный взнос</p>                   
-                   <input type="range" class="price__range">
+                   <input type="range"  type="range" value="70" min="0" max="100" oninput="rangenumber.value=value" class="price__range">
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Срок кредита </p>
-                   <input type="range" class="price__range">
+                   <input type="range"  type="range" value="70" min="0" max="100" oninput="rangenumber.value=value" class="price__range">
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Электронная регистрация</p>
@@ -146,5 +146,12 @@
            </div>
         </form>
     </div> 
+    <div>
+  
+  <input type="range" value="70" min="0" max="100" id="range" oninput="rangenumber.value=value"/>
+  <input type="number" id="rangenumber" min="0" max="100" value="70" oninput="range.value=value">
+
+</div>
+<script src="js/script.js"></script>
 </body>
 </html>
