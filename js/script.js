@@ -18,3 +18,31 @@ rangeInputs.forEach(input => {
 })
 
 numberInput.addEventListener('input', handleInputChange)
+
+
+
+
+
+
+
+
+var slider = document.getElementById('slider_valued');
+var pointer = document.getElementById('pointer');
+
+
+pointer.innerHTML = slider.value;
+console.log("slider:", slider);
+function setBagePosition(curentSlider, curentPointer){
+  const radius = curentSlider.scrollHeight;
+  const dxPixels = radius/2 + (curentSlider.valueAsNumber-parseInt(curentSlider.min))*(curentSlider.scrollWidth-radius)/(parseInt(curentSlider.max)-parseInt(curentSlider.min));
+  curentPointer.style.left = dxPixels - (curentPointer.offsetWidth / 2) + 'px';
+  
+}
+
+
+setBagePosition(slider, pointer);
+slider.oninput = function(){
+  pointer.innerHTML = slider.value + '%';
+  setBagePosition(slider, pointer);
+  
+}

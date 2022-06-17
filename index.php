@@ -12,9 +12,15 @@
                <div class="price__wraprow">
                    <p class="price__p">Город</p>
                    <select class="price__select"> 
-                        <option>Москва</option>
-                        <option>Московская область</option>
+                        <optgroup class="price__options"">
+                            <option>Москва</option>
+                            <option>Московская область</option>
+                        </optgroup>
                     </select>
+                    <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
+                        <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
+                    </svg>
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Улица</p>
@@ -26,6 +32,10 @@
                         <option>Квартира</option>
                         <option>Дом</option>
                     </select>
+                    <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
+                        <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
+                    </svg>
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Тип дома</p>
@@ -33,6 +43,10 @@
                         <option>Панельный</option>
                         <option>Монолитный</option>
                     </select>
+                    <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
+                        <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
+                    </svg>
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Этажность дома</p>
@@ -50,12 +64,30 @@
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Количество комнат</p>
-               
+                   <div class="price__rooms">
+                        <div class="price__roomitem price__roomitem_left">
+                            <input class="price__roominput" id="rad1" type="radio" name="radio" value="1">
+                            <label class="price__roomlabel" for="rad1">1</label>
+                        </div>
+                        <div class="price__roomitem">
+                            <input class="price__roominput" id="rad2" type="radio" name="radio" value="2" checked>
+                            <label class="price__roomlabel" for="rad2">2</label>
+                        </div>
+                        <div class="price__roomitem">
+                            <input class="price__roominput" id="rad3" type="radio" name="radio" value="3">
+                            <label class="price__roomlabel" for="rad3">3</label>
+                        </div>
+                        <div class="price__roomitem price__roomitem_right">
+                            <input class="price__roominput" id="rad4" type="radio" name="radio" value="4">
+                            <label class="price__roomlabel" for="rad4">4</label>
+                        </div>
+                    </div>               
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Общая площадь</p>
                    <div class="price__wrapinner">
                         <input type="number" class="price__input price__input_120w" id="rangenumber_square" min="0" max="50" value="10" oninput="range_square.value=value">
+                        <p class="price__meter">м2</p>
                         <input type="range" class="price__range" min="0" max="50" value="35" id="range_square" oninput="rangenumber_square.value=value"/>
                    </div>
                </div>
@@ -63,6 +95,7 @@
                    <p class="price__p">Площадь кухни</p>
                    <div class="price__wrapinner">
                         <input type="number" class="price__input price__input_120w" id="rangenumber_kitchen" min="0" max="50" value="10" oninput="range_kitchen.value=value">
+                        <p class="price__meter">м2</p>
                         <input type="range" class="price__range" min="0" max="50" value="35" id="range_kitchen" oninput="rangenumber_kitchen.value=value"/>
                    </div>
                </div>
@@ -72,6 +105,10 @@
                         <option>Не требует ремонта</option>
                         <option>Требует ремонта</option>
                     </select>
+                    <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
+                        <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
+                    </svg>
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Ваш телефон</p>
@@ -85,7 +122,9 @@
                    <label class="price__label" for="sms">SMS</label>
                </div>
            </div>
-           <button class="price__button">УЗНАТЬ стоимость</button>
+           <div class="price__button_wrap">
+                <button class="price__button">УЗНАТЬ стоимость</button>
+            </div>
         </form>
     </div>    
     <h1 class="price__h1 price__h1_nopad">Выберите программу и рассчитайте условия</h1>
@@ -98,6 +137,10 @@
                         <option>Для семей с детьми</option>
                         <option>Для бизнеса</option>
                     </select>
+                    <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
+                        <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
+                    </svg>
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Стоимость недвижимости</p>
@@ -147,6 +190,18 @@
                <button class="price__button price__button_yellow">подробнее</button>
                <button class="price__button price__button_yellow">оставить заявку</button>
            </div>
+           <div class="container">
+                <div class="UI-block sliders">
+                    <div class="UI-block__content sliders__content">
+                        <div class="sliders__elems value">
+                            <div class="sliders__pointer" id="pointer">  </div>                            
+                            <input type="range" class=" price__range price__range_yellow" min="0" max="50" value="35" id="slider_valued" oninput="rangenumber_kitchen.value=value"/>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
         </form>
     </div> 
     <div>
