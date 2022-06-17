@@ -60,6 +60,9 @@ body {
 	align-items: center;
 	padding-bottom: 20px;
 }
+.price__wraprow_yellow {
+	padding-bottom: 44px;
+}
 .price__arrow {
 	position: absolute;
 	right: 48px;
@@ -80,6 +83,15 @@ body {
 	font-size: 16px;
 	line-height: 120%;
 	flex-basis: 175px;
+}
+.price__p_large {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 120%;
+	padding-bottom: 12px;
+}
+.price__p_minor {
+	flex-basis: 120px;
 }
 .price__select, .price__input {
 	border: 1px solid #DBDBDB;
@@ -107,10 +119,19 @@ body {
 	font-weight: 700;
 }
 .price__input_170w {
-	max-width: 171px;
+	flex-basis: 171px;
 }
 .price__input_120w {
 	max-width: 121px;
+}
+.price__wrapcount {
+	flex-basis:944px;
+
+}
+.price__psmall_wrap {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 11px;
 }
 .price__range {
 	height: 7px;
@@ -118,7 +139,6 @@ body {
 	-webkit-appearance: none;
 	background-color: #DBDBDB;
 	-webkit-appearance: none;
-	margin-right: 15px;
 	width: 200px;
 	height: 7px;
 	background: #DBDBDB;
@@ -128,6 +148,8 @@ body {
 	background-repeat: no-repeat;
 }
 .price__range_yellow {
+	width: 100%;
+	flex-basis:auto;
 	background-image: linear-gradient(#FECC2C, #FECC2C);
 	background-size: 70% 100%;
 	background-repeat: no-repeat;
@@ -328,12 +350,26 @@ border-radius: 50%;
 	.price__select {
 		width: 100%;
 	}
+	.price__input {
+		width: 100%;
+		min-height: 48px;
+		min-width: 77px;
+		padding: 0;
+		text-align: center;
+	}
 	.price__wraprow {
 		flex-wrap: wrap;
 	}
 	.price__button_yellow {
 		display: block;
 	}
+	.price__number {
+		width: 77px;
+		height: 40px;
+	}  
+	.price__number_wrap {
+		padding-right: 16px;
+	}	
  }
  @media screen and (max-width: 600px) {
 	.price {
@@ -342,12 +378,7 @@ border-radius: 50%;
 	}
  }
 
-  input[type="number"] {
-	width: 40px;
-  }
-    
-  input[type="range"] {
-  }
+
   
   input[type=range]::-webkit-slider-runnable-track  {
 	-webkit-appearance: none;
@@ -357,15 +388,11 @@ border-radius: 50%;
   }    
   
   .sliders__content {
+	position: relative; 
 	display: flex;
-	position: relative;
-	justify-content: space-between; }
-  
-  .sliders__elems {
-	display: flex;
-	align-items: flex-end;
-	width: 44%;
-	height: 8.7rem; }
+	flex-basis: 525px;
+}
+
   
   .sliders__slider {
 	width: 100%;
@@ -390,8 +417,8 @@ border-radius: 50%;
   .sliders__pointer {
 	position: absolute;
 	background-color: transparent;
-	bottom: 30px;
+	bottom: 12px;
 	color: #FECC2C;
-	font-size: 1.5rem;
+	font-size: 24px;
 	font-weight: 600; }
   

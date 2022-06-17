@@ -26,11 +26,11 @@ numberInput.addEventListener('input', handleInputChange)
 
 
 
-var slider = document.getElementById('slider_valued');
-var pointer = document.getElementById('pointer');
+let  slider = document.getElementById('slider_valued');
+let  pointer = document.getElementById('pointer');
 
 
-pointer.innerHTML = slider.value;
+pointer.innerHTML = slider.value + '%';
 console.log("slider:", slider);
 function setBagePosition(curentSlider, curentPointer){
   const radius = curentSlider.scrollHeight;

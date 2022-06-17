@@ -51,14 +51,18 @@
                <div class="price__wraprow">
                    <p class="price__p">Этажность дома</p>
                    <div class="price__wrapinner">  
-                        <input type="number" class="price__input price__input_170w" id="rangenumber" min="0" max="100" value="70" oninput="range.value=value">
+                        <div class="price__number_wrap  price__input_170w">
+                                <input type="number" class=" price__input " id="rangenumber" min="0" max="100" value="70" oninput="range.value=value">
+                        </div>
                         <input type="range" class="price__range" value="70" min="0" max="100" id="range" oninput="rangenumber.value=value"/>
                    </div>
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Этаж квартиры</p>
                    <div class="price__wrapinner">
-                        <input type="number" class="price__input price__input_170w" id="rangenumber_flat" min="0" max="100" value="70" oninput="range_flat.value=value">
+                        <div class="price__number_wrap  price__input_170w">
+                            <input type="number" class="price__input " id="rangenumber_flat" min="0" max="100" value="70" oninput="range_flat.value=value">
+                        </div>                        
                         <input type="range" class="price__range" value="70" min="0" max="100" id="range_flat" oninput="rangenumber_flat.value=value"/>
                    </div>
                </div>
@@ -142,19 +146,50 @@
                         <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
                     </svg>
                </div>
-               <div class="price__wraprow">
+               <div class="price__wraprow price__wraprow_yellow">
                    <p class="price__p">Стоимость недвижимости</p>
-                   <input type="range" class="price__range price__range_yellow" min="0" max="50" value="35" id="range_kitchen" oninput="rangenumber_kitchen.value=value"/>
+                   <div class="price__wrapcount">
+                        <p class="price__p_large">3 767 000 ₽</p>
+                        <input type="range" class="price__range price__range_yellow" min="0" max="50" value="35" id="range_kitchen" oninput="rangenumber_kitchen.value=value"/>
+                        <div class="price__psmall_wrap">
+                            <p class="price__p_small">300 тыс.</p>
+                            <p class="price__p_small">2 млн.</p>
+                            <p class="price__p_small">5 млн.</p>
+                            <p class="price__p_small">10 млн.</p>
+                            <p class="price__p_small">30+ млн.</p>
+                        </div>
+                    </div>
                </div>
-               <div class="price__wraprow">
-                   <p class="price__p">Первоначальный взнос</p>                   
-                   <input type="range" class="price__range price__range_yellow" min="0" max="50" value="35" id="range_kitchen" oninput="rangenumber_kitchen.value=value"/>
+               <div class="price__wraprow price__wraprow_yellow">
+                   <p class="price__p">Первоначальный взнос</p>           
+                   <div class="price__wrapcount">
+                        <p class="price__p_large">182 000 ₽</p>                        
+                        <div class=" sliders__content">
+                            <div class="sliders__pointer" id="pointer"> </div>                            
+                            <input type="range" class=" price__range price__range_yellow" min="0" max="50" value="35"  id="slider_valued" oninput="rangenumber_kitchen.value=value"/> 
+                        </div>
+                        <div class="price__psmall_wrap">
+                            <p class="price__p_small">60 тыс.</p>
+                            <p class="price__p_small">140 тыс.</p>
+                            <p class="price__p_small">220 тыс.</p>
+                            <p class="price__p_small">300 тыс.</p>
+                        </div>
+                    </div>
                </div>
-               <div class="price__wraprow">
+               <div class="price__wraprow price__wraprow_yellow">
                    <p class="price__p">Срок кредита </p>
-                   <input type="range" class="price__range price__range_yellow" min="0" max="50" value="35" id="range_kitchen" oninput="rangenumber_kitchen.value=value"/>
+                   <div class="price__wrapcount">
+                        <p class="price__p_large">7 лет</p>
+                        <input type="range" class="price__range price__range_yellow" min="0" max="50" value="35" id="range_kitchen" oninput="rangenumber_kitchen.value=value"/>
+                        <div class="price__psmall_wrap">
+                            <p class="price__p_small">1 год</p>
+                            <p class="price__p_small">10 лет</p>
+                            <p class="price__p_small">20 лет</p>
+                            <p class="price__p_small">30 лет</p>
+                        </div>
+                    </div>
                </div>
-               <div class="price__wraprow">
+               <div class="price__wraprow price__wraprow_yellow">
                    <p class="price__p">Электронная регистрация</p>
                    <p class="price__p">Регистрация прав собственности без посещения Росреестра и МФЦ.</p>
                     <label class="price__switch">
@@ -166,22 +201,22 @@
            <div class="price__info">
                <div class="price__infowrap">
                    <div class="price__wraprow">
-                       <p class="price__p">Сумма кредита</p>
+                       <p class="price__p price__p_minor">Сумма кредита</p>
                        <p class="price__p_large">3 767 000 ₽</p>
                    </div>
                    <div class="price__wraprow">
-                       <p class="price__p">Ежемесячный платеж</p>
+                       <p class="price__p price__p_minor">Ежемесячный платеж</p>
                        <p class="price__p_large">42 843 ₽</p>
                    </div>
                </div>
                <div class="price__line"></div>
                <div class="price__infowrap">
                    <div class="price__wraprow">
-                       <p class="price__p">Необходимый доход</p>
+                       <p class="price__p price__p_minor">Необходимый доход</p>
                        <p class="price__p_large">61 204 ₽</p>
                    </div>
                    <div class="price__wraprow">
-                       <p class="price__p">Процентная ставка</p>
+                       <p class="price__p price__p_minor">Процентная ставка</p>
                        <p class="price__p_large">4,7 %</p>
                    </div>
                </div>
@@ -189,18 +224,8 @@
            <div class="price__wraprow">
                <button class="price__button price__button_yellow">подробнее</button>
                <button class="price__button price__button_yellow">оставить заявку</button>
-           </div>
-           <div class="container">
-                <div class="UI-block sliders">
-                    <div class="UI-block__content sliders__content">
-                        <div class="sliders__elems value">
-                            <div class="sliders__pointer" id="pointer">  </div>                            
-                            <input type="range" class=" price__range price__range_yellow" min="0" max="50" value="35" id="slider_valued" oninput="rangenumber_kitchen.value=value"/>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
+           </div>           
+               
             </div>
         </form>
     </div> 
