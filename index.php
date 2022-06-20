@@ -120,10 +120,12 @@
                </div>
                <div class="price__wraprow price__wraprow_start">
                    <p class="price__p">Уведомление</p>
-                   <input class="price__check" type="checkbox" id="call" >
-                   <label class="price__label" for="call">Звонок</label>
-                   <input class="price__check" type="checkbox" id="sms" >
-                   <label class="price__label" for="sms">SMS</label>
+                   <div class="price__call">
+                       <input class="price__check" type="checkbox" id="call" >
+                       <label class="price__label" for="call">Звонок</label>
+                       <input class="price__check" type="checkbox" id="sms" >
+                       <label class="price__label" for="sms">SMS</label>
+                   </div>
                </div>
            </div>
            <div class="price__button_wrap">
@@ -131,105 +133,102 @@
             </div>
         </form>
     </div>    
-    <h1 class="price__h1 price__h1_nopad">Выберите программу и рассчитайте условия</h1>
-    <div class="wrap__40">
-       <form action="get" class="price price_gray">
-           <div class="price__wrap">
-               <div class="price__wraprow">
-                   <p class="price__p">Цель кредита</p>
-                   <select class="price__select"> 
-                        <option>Для семей с детьми</option>
-                        <option>Для бизнеса</option>
-                    </select>
-                    <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
-                        <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
-                    </svg>
-               </div>
-               <div class="price__wraprow price__wraprow_yellow">
-                   <p class="price__p">Стоимость недвижимости</p>
-                   <div class="price__wrapcount">
-                        <p class="price__p_large">3 767 000 ₽</p>
-                        <input type="range" class="price__range price__range_yellow" min="0" max="50" value="35" id="range_kitchen" oninput="rangenumber_kitchen.value=value"/>
-                        <div class="price__psmall_wrap">
-                            <p class="price__p_small">300 тыс.</p>
-                            <p class="price__p_small">2 млн.</p>
-                            <p class="price__p_small">5 млн.</p>
-                            <p class="price__p_small">10 млн.</p>
-                            <p class="price__p_small">30+ млн.</p>
-                        </div>
-                    </div>
-               </div>
-               <div class="price__wraprow price__wraprow_yellow">
-                   <p class="price__p">Первоначальный взнос</p>           
-                   <div class="price__wrapcount">
-                        <p class="price__p_large">182 000 ₽</p>                        
-                        <div class=" sliders__content">
-                            <div class="sliders__pointer" id="pointer"> </div>                            
-                            <input type="range" class=" price__range price__range_yellow" min="0" max="50" value="35"  id="slider_valued" oninput="rangenumber_kitchen.value=value"/> 
-                        </div>
-                        <div class="price__psmall_wrap">
-                            <p class="price__p_small">60 тыс.</p>
-                            <p class="price__p_small">140 тыс.</p>
-                            <p class="price__p_small">220 тыс.</p>
-                            <p class="price__p_small">300 тыс.</p>
-                        </div>
-                    </div>
-               </div>
-               <div class="price__wraprow price__wraprow_yellow">
-                   <p class="price__p">Срок кредита </p>
-                   <div class="price__wrapcount">
-                        <p class="price__p_large">7 лет</p>
-                        <input type="range" class="price__range price__range_yellow" min="0" max="50" value="35" id="range_kitchen" oninput="rangenumber_kitchen.value=value"/>
-                        <div class="price__psmall_wrap">
-                            <p class="price__p_small">1 год</p>
-                            <p class="price__p_small">10 лет</p>
-                            <p class="price__p_small">20 лет</p>
-                            <p class="price__p_small">30 лет</p>
-                        </div>
-                    </div>
-               </div>
-               <div class="price__wraprow price__wraprow_yellow">
-                   <p class="price__p">Электронная регистрация</p>
-                   <p class="price__p">Регистрация прав собственности без посещения Росреестра и МФЦ.</p>
-                    <label class="price__switch">
-                        <input class="price__checkbox" type="checkbox">
-                        <span class="price__slider price__round"></span>
-                    </label>
-               </div>
-           </div>
-           <div class="price__info">
-               <div class="price__infowrap">
-                   <div class="price__wraprow">
-                       <p class="price__p price__p_minor">Сумма кредита</p>
-                       <p class="price__p_large">3 767 000 ₽</p>
+    <div class="price__wrap_main">
+        <h1 class="price__h1 price__h1_nopad">Выберите программу и рассчитайте условия</h1>
+        <div class="wrap__40">
+           <form action="get" class="price price_gray">
+               <div class="price__wrap">
+                   <div class="price__wraprow price__wraprow_yellow">
+                       <p class="price__p">Цель кредита</p>
+                       <select class="price__select">
+                            <option>Для семей с детьми</option>
+                            <option>Для бизнеса</option>
+                        </select>
+                        <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
+                            <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
+                        </svg>
                    </div>
-                   <div class="price__wraprow">
-                       <p class="price__p price__p_minor">Ежемесячный платеж</p>
-                       <p class="price__p_large">42 843 ₽</p>
+                   <div class="price__wraprow price__wraprow_yellow">
+                       <p class="price__p">Стоимость недвижимости</p>
+                       <div class="price__wrapcount">
+                            <p class="price__p_large">3 767 000 ₽</p>
+                            <input type="range" class="price__range price__range_yellow" min="0" max="50" value="35" id="range_kitchen" oninput="rangenumber_kitchen.value=value"/>
+                            <div class="price__psmall_wrap">
+                                <p class="price__p_small">300 тыс.</p>
+                                <p class="price__p_small">2 млн.</p>
+                                <p class="price__p_small">5 млн.</p>
+                                <p class="price__p_small">10 млн.</p>
+                                <p class="price__p_small">30+ млн.</p>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="price__wraprow price__wraprow_yellow">
+                       <p class="price__p">Первоначальный взнос</p>
+                       <div class="price__wrapcount">
+                            <p class="price__p_large price__p_pb7">182 000 ₽</p>
+                            <div class=" sliders__content">
+                                <div class="sliders__pointer" id="pointer"> </div>
+                                <input type="range" class=" price__range price__range_yellow" min="0" max="50" value="35"  id="slider_valued" oninput="rangenumber_kitchen.value=value"/>
+                            </div>
+                            <div class="price__psmall_wrap">
+                                <p class="price__p_small">60 тыс.</p>
+                                <p class="price__p_small">140 тыс.</p>
+                                <p class="price__p_small">220 тыс.</p>
+                                <p class="price__p_small">300 тыс.</p>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="price__wraprow price__wraprow_yellow">
+                       <p class="price__p">Срок кредита </p>
+                       <div class="price__wrapcount">
+                            <p class="price__p_large">7 лет</p>
+                            <input type="range" class="price__range price__range_yellow" min="0" max="50" value="35" id="range_kitchen" oninput="rangenumber_kitchen.value=value"/>
+                            <div class="price__psmall_wrap">
+                                <p class="price__p_small">1 год</p>
+                                <p class="price__p_small">10 лет</p>
+                                <p class="price__p_small">20 лет</p>
+                                <p class="price__p_small">30 лет</p>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="price__wraprow price__wraprow_yellow price__wraprow_left">
+                       <p class="price__p">Электронная регистрация</p>
+                       <p class="price__p price__p_mobile">Регистрация прав собственности без посещения Росреестра и МФЦ.</p>
+                        <label class="price__switch">
+                            <input class="price__checkbox" type="checkbox">
+                            <span class="price__slider price__round"></span>
+                            <svg class="price__arrow_white" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.12669 12.9774C5.97396 13.131 5.76558 13.2167 5.54913 13.2167C5.33267 13.2167 5.1243 13.131 4.97157 12.9774L0.359012 8.36408C-0.119671 7.8854 -0.119671 7.10919 0.359012 6.6314L0.936573 6.05369C1.4154 5.57501 2.19072 5.57501 2.6694 6.05369L5.54913 8.93357L13.3306 1.15198C13.8094 0.673298 14.5855 0.673298 15.0634 1.15198L15.641 1.72969C16.1196 2.20837 16.1196 2.98444 15.641 3.46237L6.12669 12.9774Z" fill="white"/>
+                                </svg>
+                        </label>
                    </div>
                </div>
-               <div class="price__line"></div>
-               <div class="price__infowrap">
-                   <div class="price__wraprow">
-                       <p class="price__p price__p_minor">Необходимый доход</p>
-                       <p class="price__p_large">61 204 ₽</p>
+               <div class="price__info">
+                   <div class="price__infowrap">
+                           <p class="price__p price__p_minor">Сумма кредита</p>
+                           <p class="price__p_large">3 767 000 ₽</p>
+                           <p class="price__p price__p_minor">Ежемесячный платеж</p>
+                           <p class="price__p_large">42 843 ₽</p>
                    </div>
-                   <div class="price__wraprow">
-                       <p class="price__p price__p_minor">Процентная ставка</p>
-                       <p class="price__p_large">4,7 %</p>
+                   <div class="price__line"></div>
+                   <div class="price__infowrap">
+                           <p class="price__p price__p_minor">Необходимый доход</p>
+                           <p class="price__p_large">61 204 ₽</p>
+                           <p class="price__p price__p_minor">Процентная ставка</p>
+                           <p class="price__p_large">4,7 %</p>
                    </div>
                </div>
-           </div>
-           <div class="price__wraprow">
-               <button class="price__button price__button_yellow">подробнее</button>
-               <button class="price__button price__button_yellow">оставить заявку</button>
-           </div>           
-               
-            </div>
-        </form>
-    </div> 
-    <div>
+               <div class="price__wraprow price__btnwrap">
+                   <div class="price__btninner"><a href= "#" class="price__button price__button_yellow">подробнее</a></div>
+                   <div class="price__btninner"><a href= "#" class="price__button price__button_yellow" >Оставить заявку </a></div>
+               </div>
+        
+                </div>
+            </form>
+        </div>
+        <div>
+    </div>
 
 </div>
 <script src="js/script.js"></script>
