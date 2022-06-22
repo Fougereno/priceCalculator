@@ -52,18 +52,18 @@
                    <p class="price__p">Этажность дома</p>
                    <div class="price__wrapinner">  
                         <div class="price__number_wrap  price__input_170w">
-                                <input type="number" class=" price__input " id="rangenumber" min="0" max="100" value="70" oninput="range.value=value">
+                                <input type="number" class=" price__input " id="rangenumber" min="5" max="120" value="85" oninput="range.value=value">
                         </div>
-                        <input type="range" class="price__range" value="70" min="0" max="100" id="range" oninput="rangenumber.value=value"/>
+                        <input type="range" class="price__range" value="85" min="5" max="120" id="range" oninput="rangenumber.value=value"/>
                    </div>
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Этаж квартиры</p>
                    <div class="price__wrapinner">
                         <div class="price__number_wrap  price__input_170w">
-                            <input type="number" class="price__input " id="rangenumber_flat" min="0" max="100" value="70" oninput="range_flat.value=value">
+                            <input type="number" class="price__input " id="rangenumber_flat" min="1" max="120" value="85" oninput="range_flat.value=value">
                         </div>                        
-                        <input type="range" class="price__range" value="70" min="0" max="100" id="range_flat" oninput="rangenumber_flat.value=value"/>
+                        <input type="range" class="price__range" value="85" min="1" max="120" id="range_flat" oninput="rangenumber_flat.value=value"/>
                    </div>
                </div>
                <div class="price__wraprow">
@@ -90,17 +90,17 @@
                <div class="price__wraprow">
                    <p class="price__p">Общая площадь</p>
                    <div class="price__wrapinner">
-                        <input type="number" class="price__input price__input_120w" id="rangenumber_square" min="0" max="50" value="10" oninput="range_square.value=value">
+                        <input type="number" class="price__input price__input_120w" id="rangenumber_square" min="10" max="300" value="210" oninput="range_square.value=value">
                         <p class="price__meter">м2</p>
-                        <input type="range" class="price__range" min="0" max="50" value="35" id="range_square" oninput="rangenumber_square.value=value"/>
+                        <input type="range" class="price__range" min="10" max="300" value="210" id="range_square" oninput="rangenumber_square.value=value"/>
                    </div>
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Площадь кухни</p>
                    <div class="price__wrapinner">
-                        <input type="number" class="price__input price__input_120w" id="rangenumber_kitchen" min="0" max="50" value="10" oninput="range_kitchen.value=value">
+                        <input type="number" class="price__input price__input_120w" id="rangenumber_kitchen" min="5" max="50" value="37" oninput="range_kitchen.value=value">
                         <p class="price__meter">м2</p>
-                        <input type="range" class="price__range" min="0" max="50" value="35" id="range_kitchen" oninput="rangenumber_kitchen.value=value"/>
+                        <input type="range" class="price__range" min="5" max="50" value="37" id="range_kitchen" oninput="rangenumber_kitchen.value=value"/>
                    </div>
                </div>
                <div class="price__wraprow">
@@ -121,9 +121,9 @@
                <div class="price__wraprow price__wraprow_start">
                    <p class="price__p">Уведомление</p>
                    <div class="price__call">
-                       <input class="price__check" type="checkbox" id="call" >
+                       <input name="contact"  class="price__check" type="radio" id="call" >
                        <label class="price__label" for="call">Звонок</label>
-                       <input class="price__check" type="checkbox" id="sms" >
+                       <input name="contact"  class="price__check" type="radio" id="sms" >
                        <label class="price__label" for="sms">SMS</label>
                    </div>
                </div>
