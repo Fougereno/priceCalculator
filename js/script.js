@@ -2,16 +2,24 @@ const rangeInputs = document.querySelectorAll('input[type="range"]');
 const numberInput = document.querySelector('input[type="number"]');
 let  slider = document.getElementById('slider_valued');
 let  pointer = document.getElementById('pointer');
-let  floors = document.getElementById('range');
-let  myfloor = document.getElementById('range_flat');
-let floor = document.getElementsByClassName('price__floor');
 
-myfloor.oninput = function() {
-  if (myfloor.value >= floors.value ) {
-    floors.value = myfloor.value;
+
+let  floors = document.getElementById('range');
+let  floor = document.getElementById('range_flat');
+let  numfloors = document.getElementById('rangenumber');
+let  numfloor = document.getElementById('rangenumber_flat');
+
+
+floor.addEventListener('input', checkInputErrors);
+
+function checkInputErrors() {
+  if (floor.value >= floors.value ) {
+    floors.value = floor.value ;
   } else {
+    
   }
 };
+
 
 rangeInputs.forEach(input => {
   input.addEventListener('input', handleInputChange)
