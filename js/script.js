@@ -2,6 +2,16 @@ const rangeInputs = document.querySelectorAll('input[type="range"]');
 const numberInput = document.querySelector('input[type="number"]');
 let  slider = document.getElementById('slider_valued');
 let  pointer = document.getElementById('pointer');
+let  floors = document.getElementById('range');
+let  myfloor = document.getElementById('range_flat');
+let  numfloor = document.getElementById('rangenumber_flat');
+
+myfloor.oninput = function() {
+  if (myfloor.value >= floors.value ) {
+    floors.value = myfloor.value;
+  } else {
+  }
+}
 
 
 rangeInputs.forEach(input => {
@@ -10,8 +20,9 @@ rangeInputs.forEach(input => {
 
 numberInput.addEventListener('input', handleInputChange);
 
-pointer.innerHTML = slider.value + '%';
 
+// - проценты на желтом бегунке
+pointer.innerHTML = slider.value + '%';
 
 setBagePosition(slider, pointer);
 slider.oninput = function(){
@@ -20,7 +31,7 @@ slider.oninput = function(){
   
 }
 
-
+// - select стилизация
 let x, i, j, l, ll, selElmnt, a, b, c;
 x = document.getElementsByClassName("price__custom");
 l = x.length;
@@ -68,6 +79,8 @@ for (i = 0; i < l; i++) {
 }
 
 document.addEventListener("click", closeAllSelect);
+
+
 
 
 

@@ -16,6 +16,12 @@
                             <option class="price__rad" value="0"></option>
                             <option value="2">Москва</option>
                             <option value="3">Московская область</option>
+                            <option value="2">Самара</option>
+                            <option value="2">Новосибирск</option>
+                            <option value="2">Астрахань</option>
+                            <option value="2">Санкт-Петербург</option>
+                            <option value="2">Тула</option>
+                            <option value="2">Омск</option>
                         </select>
                     </div>
                     <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,6 +40,8 @@
                             <option class="price__rad" value="0"></option>
                             <option value="2">Квартира</option>
                             <option value="3">Дом</option>
+                            <option value="3">Земельный участок</option>
+                            <option value="3">Прочее</option>
                         </select>
                     </div>
                     <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
