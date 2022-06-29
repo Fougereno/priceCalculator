@@ -67,7 +67,7 @@
                    <p class="price__p">Этажность дома</p>
                    <div class="price__wrapinner">  
                         <div class="price__number_wrap  price__input_170w">
-                                <input type="number" class=" price__input " id="rangenumber" min="5" max="120" value="85" oninput="range.value=value">
+                                <input type="number" class=" price__input price__floor" id="rangenumber" min="5" max="120" value="85" oninput="range.value=value">
                         </div>
                         <input type="range" class="price__range" value="85" min="5" max="120" id="range" oninput="rangenumber.value=value"/>
                    </div>
@@ -134,7 +134,7 @@
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Ваш телефон</p>
-                   <input type="tel" class="price__input">
+                   <input type="tel" class="tel price__input">
                </div>
                <div class="price__wraprow price__wraprow_start">
                    <p class="price__p">Уведомление</p>
