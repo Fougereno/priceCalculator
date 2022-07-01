@@ -189,8 +189,8 @@
                        <div class="price__wrapcount">
                             <p class="price__p_large price__p_pb7">182 000 ₽</p>
                             <div class=" sliders__content">
-                                <div class="sliders__pointer" id="pointer"> </div>
-                                <input type="range" class=" price__range price__range_yellow" min="0" max="50" value="35"  id="slider_valued" oninput="rangenumber_kitchen.value=value"/>
+                                <div class="sliders__pointer" id="price__pointer"> </div>
+                                <input type="range" class=" price__range price__range_yellow" min="0" max="50" value="35"  id="price__percent" oninput="rangenumber_kitchen.value=value"/>
                             </div>
                             <div class="price__psmall_wrap">
                                 <p class="price__p_small">60 тыс.</p>
@@ -252,6 +252,7 @@
     </div>
 
 </div>
-<script src="js/script.js"></script>
+<script src="js/scriptcopy.js"></script>
+<!-- <script src="js/script.js"></script> -->
 </body>
 </html>

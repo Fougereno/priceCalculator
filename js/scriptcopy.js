@@ -1,38 +1,7 @@
-// сделаю отдельные блоки: что и зачем делает
-
-
-
-
-
-// - появление процентов на желтом бегунке "Первоначальный взнос"
-
-let  range = document.getElementById('price__percent'); // нашли range
-let  pointer = document.getElementById('price__pointer'); // нашли div около range
-pointer.innerHTML = range.value + '%'; // находим значение range и подставляеми в div, чтобы отобразились цифры (пока только то, что в value в html у range)
-
-changePosition(range, pointer);
-
-range.oninput = function(){
-  range.innerHTML = range.value + '%';
-  changePosition(range, pointer);  
-}
-
-
-function changePosition(findRange, findPointer){ // создаем функцию, чтобы div менялся в зависимости от значения бегунка range
-  const radius = findRange.scrollHeight;
-  const dxPixels = radius/2 + (findRange.valueAsNumber-parseInt(findRange.min))*(findRange.scrollWidth-radius)/(parseInt(findRange.max)-parseInt(findRange.min));
-  findPointer.style.left = dxPixels - (findPointer.offsetWidth / 2) + 'px';
-}
-
-
-//
-
-
-
-
 const rangeInputs = document.querySelectorAll('input[type="range"]');
 const numberInput = document.querySelector('input[type="number"]');
-
+let  slider = document.getElementById('price__percent');
+let  pointer = document.getElementById('price__pointer');
 
 
 let  floors = document.getElementById('range');
@@ -41,7 +10,15 @@ let  numfloors = document.getElementById('rangenumber');
 let  numfloor = document.getElementById('rangenumber_flat');
 
 
+floor.addEventListener('input', checkInputErrors);
 
+function checkInputErrors() {
+  if (floor.value >= floors.value ) {
+    floors.value = floor.value ;
+  } else {
+    
+  }
+};
 
 
 rangeInputs.forEach(input => {
@@ -51,7 +28,15 @@ rangeInputs.forEach(input => {
 numberInput.addEventListener('input', handleInputChange);
 
 
+// - проценты на желтом бегунке
+pointer.innerHTML = slider.value + '%';
 
+setBagePosition(price__percent, price__pointer);
+slider.oninput = function(){
+  pointer.innerHTML = slider.value + '%';
+  setBagePosition(slider, pointer);
+  
+}
 
 // - select стилизация
 let x, i, j, l, ll, selElmnt, a, b, c;
@@ -172,4 +157,10 @@ function handleInputChange(e) {
   const val = target.value
   
   target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
+}
+function setBagePosition(curentSlider, curentPointer){
+  const radius = curentSlider.scrollHeight;
+  const dxPixels = radius/2 + (curentSlider.valueAsNumber-parseInt(curentSlider.min))*(curentSlider.scrollWidth-radius)/(parseInt(curentSlider.max)-parseInt(curentSlider.min));
+  curentPointer.style.left = dxPixels - (curentPointer.offsetWidth / 2) + 'px';
+  
 }
