@@ -252,7 +252,7 @@
     </div>
 
 </div>
-<script src="js/scriptcopy.js"></script>
-<!-- <script src="js/script.js"></script> -->
+<!-- <script src="js/scriptcopy.js"></script> -->
+<script src="js/script.js"></script>
 </body>
 </html>

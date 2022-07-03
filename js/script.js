@@ -17,31 +17,21 @@ range.oninput = function(){
   changePosition(range, pointer);  
 }
 
-
 function changePosition(findRange, findPointer){ // создаем функцию, чтобы div менялся в зависимости от значения бегунка range
-  const radius = findRange.scrollHeight;
-  const dxPixels = radius/2 + (findRange.valueAsNumber-parseInt(findRange.min))*(findRange.scrollWidth-radius)/(parseInt(findRange.max)-parseInt(findRange.min));
-  findPointer.style.left = dxPixels - (findPointer.offsetWidth / 2) + 'px';
+  
 }
 
-
 //
-
 
 
 
 const rangeInputs = document.querySelectorAll('input[type="range"]');
 const numberInput = document.querySelector('input[type="number"]');
 
-
-
 let  floors = document.getElementById('range');
 let  floor = document.getElementById('range_flat');
 let  numfloors = document.getElementById('rangenumber');
 let  numfloor = document.getElementById('rangenumber_flat');
-
-
-
 
 
 rangeInputs.forEach(input => {
@@ -102,7 +92,25 @@ for (i = 0; i < l; i++) {
 
 document.addEventListener("click", closeAllSelect);
 
-
+function closeAllSelect(elmnt) {
+  let x, y, i, xl, yl, arrNo = [];
+  x = document.getElementsByClassName("select-items");
+  y = document.getElementsByClassName("select-selected");
+  xl = x.length;
+  yl = y.length;
+  for (i = 0; i < yl; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i)
+    } else {
+      y[i].classList.remove("select-arrow-active");
+    }
+  }
+  for (i = 0; i < xl; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add("select-hide");
+    }
+  }
+}
 // телефон
 
 window.addEventListener("DOMContentLoaded", function() {
@@ -142,26 +150,8 @@ window.addEventListener("DOMContentLoaded", function() {
 
 });
 
+//
 
-function closeAllSelect(elmnt) {
-  let x, y, i, xl, yl, arrNo = [];
-  x = document.getElementsByClassName("select-items");
-  y = document.getElementsByClassName("select-selected");
-  xl = x.length;
-  yl = y.length;
-  for (i = 0; i < yl; i++) {
-    if (elmnt == y[i]) {
-      arrNo.push(i)
-    } else {
-      y[i].classList.remove("select-arrow-active");
-    }
-  }
-  for (i = 0; i < xl; i++) {
-    if (arrNo.indexOf(i)) {
-      x[i].classList.add("select-hide");
-    }
-  }
-}
 function handleInputChange(e) {
   let target = e.target
   if (e.target.type !== 'range') {
