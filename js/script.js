@@ -28,6 +28,7 @@ function changePosition(findRange, findPointer){ // создаем функци�
 
 
 
+
 // - цвет range меняется при перемещении
 
 
@@ -54,9 +55,7 @@ function handleInputChange(e) {
 
 
 
-// - телефон
-
-
+// - телефон (сделала как в примере, там были реулярные выражения. тему прочитала, вроде все понятно)
 
 let phone = document.querySelectorAll('input[type="tel"]'); // находим все телефоны
 
@@ -87,10 +86,10 @@ function eventPhone (e) {
 
 
 
-let  floors = document.getElementById('range');
-let  floor = document.getElementById('range_flat');
-let  numfloors = document.getElementById('rangenumber');
-let  numfloor = document.getElementById('rangenumber_flat');
+// let  floors = document.getElementById('range');
+// let  floor = document.getElementById('range_flat');
+// let  numfloors = document.getElementById('rangenumber');
+// let  numfloor = document.getElementById('rangenumber_flat');
 
 
 
