@@ -58,89 +58,36 @@ function eventPhone (e) {
 
   e.target.value = matrix.replace(/./g, function (a) {
     let ry = /[_\d]/.test(a);
-    console.log(ry);
       return /[_\d]/.test(a) && start < val.length ? val.charAt(start++) : start >= val.length ? "" : a
   }); // matrix заменяем все символы по принципу: (проверяем есть ли в matrix числа или "_")и (start меньше тому, что уже ввели? (value))? start +1 (увеличивается, пока не будет больше длины matrix, т.е. не больше длины телефона) : старт  не больше длины телефона? ничего больше ввести нельзя : ввести символ matrix
   
 }
 
-//
 
+// - select стилизация
+let findselect = document.querySelectorAll('.select__header');
+let findselitem = document.querySelectorAll('.select__item');
 
+findselect.forEach(item => {
+  item.addEventListener('click', changeSelect)
+});
+findselitem.forEach(item => {
+  item.addEventListener('click', chooseSelect);
+});
+
+function changeSelect() {
+  this.parentElement.classList.toggle('select_active');
+};
+function chooseSelect() {
+  let text = this.innerText;
+  let select = this.closest('.select');
+  let currentText = select.querySelector('.select__current');
+  currentText.innerText = text;
+  select.classList.remove('select_active');
+};
 // let  floors = document.getElementById('range');
 // let  floor = document.getElementById('range_flat');
 // let  numfloors = document.getElementById('rangenumber');
 // let  numfloor = document.getElementById('rangenumber_flat');
-
-
-
-// // - select стилизация
-// let x, i, j, l, ll, selElmnt, a, b, c;
-// x = document.getElementsByClassName("price__custom");
-// l = x.length;
-// for (i = 0; i < l; i++) {
-//   selElmnt = x[i].getElementsByTagName("select")[0];
-//   ll = selElmnt.length;
-//   a = document.createElement("DIV");
-//   a.setAttribute("class", "select-selected");
-//   a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-//   x[i].appendChild(a);
-//   b = document.createElement("DIV");
-//   b.setAttribute("class", "select-items select-hide");
-//   for (j = 1; j < ll; j++) {
-//     c = document.createElement("DIV");
-//     c.innerHTML = selElmnt.options[j].innerHTML;
-//     c.addEventListener("click", function(e) {
-//         let y, i, k, s, h, sl, yl;
-//         s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-//         sl = s.length;
-//         h = this.parentNode.previousSibling;
-//         for (i = 0; i < sl; i++) {
-//           if (s.options[i].innerHTML == this.innerHTML) {
-//             s.selectedIndex = i;
-//             h.innerHTML = this.innerHTML;
-//             y = this.parentNode.getElementsByClassName("same-as-selected");
-//             yl = y.length;
-//             for (k = 0; k < yl; k++) {
-//               y[k].removeAttribute("class");
-//             }
-//             this.setAttribute("class", "same-as-selected");
-//             break;
-//           }
-//         }
-//         h.click();
-//     });
-//     b.appendChild(c);
-//   }
-//   x[i].appendChild(b);
-//   a.addEventListener("click", function(e) {
-//       e.stopPropagation();
-//       closeAllSelect(this);
-//       this.nextSibling.classList.toggle("select-hide");
-//       this.classList.toggle("select-arrow-active");
-//     });
-// }
-
-// document.addEventListener("click", closeAllSelect);
-
-// function closeAllSelect(elmnt) {
-//   let x, y, i, xl, yl, arrNo = [];
-//   x = document.getElementsByClassName("select-items");
-//   y = document.getElementsByClassName("select-selected");
-//   xl = x.length;
-//   yl = y.length;
-//   for (i = 0; i < yl; i++) {
-//     if (elmnt == y[i]) {
-//       arrNo.push(i)
-//     } else {
-//       y[i].classList.remove("select-arrow-active");
-//     }
-//   }
-//   for (i = 0; i < xl; i++) {
-//     if (arrNo.indexOf(i)) {
-//       x[i].classList.add("select-hide");
-//     }
-//   }
-// }
 
 

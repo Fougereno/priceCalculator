@@ -130,6 +130,50 @@ body {
 	padding-right: 35px;
 	appearance: none;  
 }
+.select {
+	flex-grow: 2;
+	font-size: 14px;
+	font-weight: 400;
+	font-family: 'gotham_pro', sans-serif;
+	color: #000;
+	position: relative;
+}
+.select_active .select__body {
+	display: block;
+}
+.select__header {
+	border: 1px solid #DBDBDB;
+	border-radius: 3px;
+	min-height: 60px;
+	padding-left: 35px;
+	transition: 300ms;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.select__icon {
+	cursor: pointer;
+	transform: translate(0, -4px);
+}
+.select__body {
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	left: 0;
+	border: 1px solid #DBDBDB;
+	background-color: #FFF;
+	border-radius: 3px;
+	border-top: 0;
+	z-index: 10;
+}
+.select__item {
+	line-height: 60px;
+	padding-left: 35px;
+}
+.select__item:hover {
+	background-color: #DBDBDB;
+}
 .price__meter {
 	flex: auto;
 	padding-left: 8px;
@@ -491,10 +535,6 @@ transform: translateX(32px);
 	.price__line {
 		display: none;
 	}
-	.price__arrow {
-		top: 49%;
-		right: 6%;
-	}
 	.wrap__40 {
 		padding-top: 0;
 		padding-bottom: 0;
@@ -556,51 +596,3 @@ transform: translateX(32px);
 	}
  }
 
- .price__custom {
-	position: relative;
-	flex-grow: 2;
-  }
-  
-  .price__custom select {
-	display: none; 
-  }
-  .select-selected {
-	background: white;
-  }
-  .select-selected.select-arrow-active:after {
-	border-color: transparent transparent #fff transparent;
-	top: 7px;
-  }
-  .select-items div,.select-selected {
-	color: black;
-	padding: 8px 16px;
-	min-height: 60px;
-	border: 1px solid #DBDBDB;
-	border-radius: 3px;    
-	cursor: pointer;
-	user-select: none;
-	display: flex;
-	align-items: center;
-  }
-  .select-items div,.select-selected:first-child {
-	border-radius: 0px;
-	margin-top: -3px;
-  }
-  .select-items {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	right: 0;
-	z-index: 99;
-	background: white;
-	color: black;
-	min-height: 50px;
-  }
-  
-  .select-hide {
-	display: none;
-  }
-  
-  .select-items div:hover, .same-as-selected {
-	background-color: rgba(0, 0, 0, 0.1);
-  }

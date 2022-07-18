@@ -10,9 +10,26 @@
            <h1 class="price__h1">Узнайте самую выгодную стоимость своей квартиры через <span class="price__h1_red">онлайн—калькулятор!</span> </h1>
            <div class="price__wrap">
                <div class="price__wraprow">
-                   <p class="price__p">Город</p>
-                   <div class="price__custom" >
-                        <select class="price__wraprow price__select">
+                   <p class="price__p">Город</p>  
+                   <div class="  select ">
+                        <div class="select__header">
+                            <div class="select__current">Москва</div>
+                            <div class="select__icon">
+                            <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
+                                <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
+                            </svg>
+                            </div>
+                        </div>
+                        <div class="select__body">
+                            <div class="select__item">Москва</div>
+                            <div class="select__item">Самара</div>
+                            <div class="select__item">Новосибирск</div>
+                            <div class="select__item">Астрахань</div>
+                            <div class="select__item">Омск</div>
+                        </div>
+                   </div>
+                        <!-- <select class="price__wraprow price__select">
                             <option class="price__rad" value="0"></option>
                             <option value="2">Москва</option>
                             <option value="3">Московская область</option>
@@ -22,12 +39,11 @@
                             <option value="2">Санкт-Петербург</option>
                             <option value="2">Тула</option>
                             <option value="2">Омск</option>
-                        </select>
-                    </div>
-                    <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        </select> -->
+                    <!-- <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
                         <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
-                    </svg>
+                    </svg> -->
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Улица</p>
@@ -35,7 +51,6 @@
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Тип недвижимости</p>
-                    <div class="price__custom" >
                         <select class="price__wraprow price__select">
                             <option class="price__rad" value="0"></option>
                             <option value="2">Квартира</option>
@@ -43,7 +58,6 @@
                             <option value="3">Земельный участок</option>
                             <option value="3">Прочее</option>
                         </select>
-                    </div>
                     <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
                         <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
@@ -51,13 +65,11 @@
                </div>               
                 <div class="price__wraprow">
                    <p class="price__p">Тип дома</p>
-                    <div class="price__custom" >
                         <select class="price__wraprow price__select">
                             <option class="price__rad" value="0"></option>
                             <option value="2">Панельный</option>
                             <option value="3">Монолитный</option>
                         </select>
-                    </div>
                     <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
                         <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
@@ -120,13 +132,11 @@
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Состояние</p>
-                    <div class="price__custom" >
                         <select class="price__wraprow price__select">
                             <option class="price__rad" value="0"></option>
                             <option value="2">Не требует ремонта</option>
                             <option value="3">Требует ремонта</option>
                         </select>
-                    </div>
                     <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
                         <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
@@ -158,13 +168,11 @@
                <div class="price__wrap">
                    <div class="price__wraprow price__wraprow_yellow">
                        <p class="price__p">Цель кредита</p>
-                        <div class="price__custom" >
                             <select class="price__wraprow price__select">
                                 <option class="price__rad" value="0"></option>
                                 <option value="2">Для семей с детьми</option>
                                 <option value="3">Для бизнеса</option>
                             </select>
-                        </div>
                         <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
                             <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
