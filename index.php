@@ -11,7 +11,7 @@
            <div class="price__wrap">
                <div class="price__wraprow">
                    <p class="price__p">Город</p>  
-                   <div class="  select ">
+                   <div class="select">
                         <div class="select__header">
                             <div class="select__current">Москва</div>
                             <div class="select__icon">
@@ -50,31 +50,43 @@
                    <input type="text" class="price__input">
                </div>
                <div class="price__wraprow">
-                   <p class="price__p">Тип недвижимости</p>
-                        <select class="price__wraprow price__select">
-                            <option class="price__rad" value="0"></option>
-                            <option value="2">Квартира</option>
-                            <option value="3">Дом</option>
-                            <option value="3">Земельный участок</option>
-                            <option value="3">Прочее</option>
-                        </select>
-                    <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
-                        <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
-                    </svg>
-               </div>               
-                <div class="price__wraprow">
-                   <p class="price__p">Тип дома</p>
-                        <select class="price__wraprow price__select">
-                            <option class="price__rad" value="0"></option>
-                            <option value="2">Панельный</option>
-                            <option value="3">Монолитный</option>
-                        </select>
-                    <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
-                        <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
-                    </svg>
-               </div>
+                   <p class="price__p">Тип недвижимости</p>  
+                   <div class="select">
+                        <div class="select__header">
+                            <div class="select__current">Квартира</div>
+                            <div class="select__icon">
+                            <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
+                                <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
+                            </svg>
+                            </div>
+                        </div>
+                        <div class="select__body">
+                            <div class="select__item">Квартира</div>
+                            <div class="select__item">Дом</div>
+                            <div class="select__item">Земельный участок</div>
+                            <div class="select__item">Прочее</div>
+                        </div>
+                   </div>
+               </div>     
+               <div class="price__wraprow">
+                   <p class="price__p">Тип дома</p>  
+                   <div class="select">
+                        <div class="select__header">
+                            <div class="select__current">Панельный</div>
+                            <div class="select__icon">
+                            <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
+                                <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
+                            </svg>
+                            </div>
+                        </div>
+                        <div class="select__body">
+                            <div class="select__item">Панельный</div>
+                            <div class="select__item">Монолитный</div>
+                        </div>
+                   </div>
+               </div>         
                <div class="price__wraprow">
                    <p class="price__p">Этажность дома</p>
                    <div class="price__wrapinner">  
@@ -131,17 +143,23 @@
                    </div>
                </div>
                <div class="price__wraprow">
-                   <p class="price__p">Состояние</p>
-                        <select class="price__wraprow price__select">
-                            <option class="price__rad" value="0"></option>
-                            <option value="2">Не требует ремонта</option>
-                            <option value="3">Требует ремонта</option>
-                        </select>
-                    <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
-                        <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
-                    </svg>
-               </div>
+                   <p class="price__p">Состояние</p>  
+                   <div class="select">
+                        <div class="select__header">
+                            <div class="select__current">Не требует ремонта</div>
+                            <div class="select__icon">
+                            <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
+                                <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
+                            </svg>
+                            </div>
+                        </div>
+                        <div class="select__body">
+                            <div class="select__item">Не требует ремонта</div>
+                            <div class="select__item">Требует ремонта</div>
+                        </div>
+                   </div>
+               </div>                     
                <div class="price__wraprow">
                    <p class="price__p">Ваш телефон</p>
                    <input type="tel" class="tel price__input">
@@ -166,18 +184,24 @@
         <div class="wrap__40">
            <form action="get" class="price price_gray">
                <div class="price__wrap">
-                   <div class="price__wraprow price__wraprow_yellow">
-                       <p class="price__p">Цель кредита</p>
-                            <select class="price__wraprow price__select">
-                                <option class="price__rad" value="0"></option>
-                                <option value="2">Для семей с детьми</option>
-                                <option value="3">Для бизнеса</option>
-                            </select>
-                        <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
-                            <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
-                        </svg>
-                   </div>
+                    <div class="price__wraprow price__wraprow_yellow">
+                        <p class="price__p">Цель кредита</p>  
+                        <div class="select">
+                                <div class="select__header">
+                                    <div class="select__current">Для семей с детьми</div>
+                                    <div class="select__icon">
+                                    <svg class="price__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="0.353553" y1="0.646447" x2="7.35355" y2="7.64645" stroke="black"/>
+                                        <line y1="-0.5" x2="9.8995" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="black"/>
+                                    </svg>
+                                    </div>
+                                </div>
+                                <div class="select__body">
+                                    <div class="select__item">Для семей с детьми</div>
+                                    <div class="select__item">Для бизнеса</div>
+                                </div>
+                        </div>
+                    </div>   
                    <div class="price__wraprow price__wraprow_yellow">
                        <p class="price__p">Стоимость недвижимости</p>
                        <div class="price__wrapcount">

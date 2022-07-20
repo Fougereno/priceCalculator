@@ -65,29 +65,48 @@ function eventPhone (e) {
 
 
 // - select стилизация
-let findselect = document.querySelectorAll('.select__header');
-let findselitem = document.querySelectorAll('.select__item');
+let findselect = document.querySelectorAll('.select__header'); // находим главное окно
+let findselitem = document.querySelectorAll('.select__item'); // находим выпадающие окошки
 
 findselect.forEach(item => {
-  item.addEventListener('click', changeSelect)
+  item.addEventListener('click', changeSelect) //  меняет display none на visible у выпадающего списка
 });
 findselitem.forEach(item => {
-  item.addEventListener('click', chooseSelect);
+  item.addEventListener('click', chooseSelect); //  меняет значение с классов current на выбранное
 });
 
 function changeSelect() {
-  this.parentElement.classList.toggle('select_active');
+  this.parentElement.classList.toggle('select_active');// toggle добавляет и убирает класс у родительского элемента с классом  select,что меняет display none на visible у выпадающего списка
 };
 function chooseSelect() {
-  let text = this.innerText;
-  let select = this.closest('.select');
-  let currentText = select.querySelector('.select__current');
-  currentText.innerText = text;
-  select.classList.remove('select_active');
+  let text = this.innerText; // this будет принимать значение выбранных элементов из выпадающего списка
+  let select = this.closest('.select'); // определяет, в каком селекте происходит выбор
+  let currentText = select.querySelector('.select__current'); // находит окно выбора
+  currentText.innerText = text; // меняет значение на выбранное щелчком
+  select.classList.remove('select_active'); // убирает видимость прочих выборов
 };
-// let  floors = document.getElementById('range');
-// let  floor = document.getElementById('range_flat');
-// let  numfloors = document.getElementById('rangenumber');
-// let  numfloor = document.getElementById('rangenumber_flat');
 
 
+//  Закрыть для пользователя возможность допустить ошибки.  возможность выбрать в 5-ти этажном доме 120-й этаж.
+// этаж больше или = этажность дома
+
+
+let  floors = document.getElementById('range');// все этажи
+let  numfloors = document.getElementById('rangenumber');// number всех этажей
+
+let  floor = document.getElementById('range_flat');// этаж
+let  numfloor = document.getElementById('rangenumber_flat');// number этажа 
+
+//если floor больше floors, значение floor = floors
+// просто while не напишешь. потому что посчитает текущее значение. поэтому вещаем обработчик oninput
+// нужно переписать oninput, т.к. oninput html будет переписываться js
+// console.log(floor.value);
+floors.oninput = handleRangechange;
+
+function handleRangechange() {
+  floors.value = numfloors.value;
+  console.log(floors.value);
+  // while (floors.value < floor.value) { 
+  //   floor.value = floors.value;
+  // };
+};

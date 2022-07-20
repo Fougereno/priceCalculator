@@ -63,6 +63,10 @@ body {
 .price__wraprow_yellow {
 	padding-bottom: 44px;
 }
+.price__wraprow_yellow .select {
+	flex-grow: 0;
+	flex-basis: 868px;
+}
 .price__wraprow_left {
 	justify-content: start;
 	padding-top: 13px;
@@ -79,7 +83,8 @@ body {
 	top: 11px;
 	left: 15px;
 	width: 16px;
-	height: 16px;
+	height: 16px;	
+	cursor: pointer;
 }
 .price__wraprow_start {
 	justify-content: start;
@@ -121,7 +126,7 @@ body {
 	color: #000;
 	transition: 300ms;
 }
-.price__select:focus, .price__input:focus {
+.price__input:focus {
 	box-shadow: 0 0 5px #ccc;
 }
 .price__select  {
@@ -141,7 +146,8 @@ body {
 .select_active .select__body {
 	display: block;
 }
-.select__header {
+.select__header {	
+	background-color: #fff;
 	border: 1px solid #DBDBDB;
 	border-radius: 3px;
 	min-height: 60px;
@@ -170,6 +176,7 @@ body {
 .select__item {
 	line-height: 60px;
 	padding-left: 35px;
+	cursor: pointer;
 }
 .select__item:hover {
 	background-color: #DBDBDB;
@@ -192,7 +199,7 @@ body {
 	max-width: 121px;
 }
 .price__wrapcount {
-	flex-basis:944px;
+	flex-basis:868px;
 
 }
 .price__psmall_wrap {
@@ -213,6 +220,7 @@ body {
 	background-image: linear-gradient(#ff4500, #ff4500);
 	background-size: 70% 100%;
 	background-repeat: no-repeat;
+	cursor: pointer;
 }
 .price__range_yellow {
 	width: 100%;
@@ -348,7 +356,7 @@ font-weight: 600; }
 	-webkit-appearance: none;
 	height: 21px;
 	border: #ffffff 6px solid;
-	
+	cursor: pointer;
 	border-radius: 50%;
 	box-shadow: 0px 0px 3px #DBDBDB;
 }
