@@ -88,25 +88,59 @@ function chooseSelect() {
 
 
 //  Закрыть для пользователя возможность допустить ошибки.  возможность выбрать в 5-ти этажном доме 120-й этаж.
-// этаж больше или = этажность дома
 
+let  floorHouseRange = document.getElementById('range');// все этажи
+let  floorsHouseNumber = document.getElementById('rangenumber');// number всех этажей
 
-let  floors = document.getElementById('range');// все этажи
-let  numfloors = document.getElementById('rangenumber');// number всех этажей
-
-let  floor = document.getElementById('range_flat');// этаж
-let  numfloor = document.getElementById('rangenumber_flat');// number этажа 
-
-//если floor больше floors, значение floor = floors
-// просто while не напишешь. потому что посчитает текущее значение. поэтому вещаем обработчик oninput
-// нужно переписать oninput, т.к. oninput html будет переписываться js
-// console.log(floor.value);
-floors.oninput = handleRangechange;
-
-function handleRangechange() {
-  floors.value = numfloors.value;
-  console.log(floors.value);
-  // while (floors.value < floor.value) { 
-  //   floor.value = floors.value;
-  // };
+let  floorFlatRange = document.getElementById('range_flat');// этаж
+let  floorFlatNumber = document.getElementById('rangenumber_flat');// number этажа 
+// обрабоотчики событий для каждого изменения бегунка
+floorHouseRange.onchange = function() {
+  floorHouseRange.value = floorsHouseNumber.value;
+  if (floorHouseRange.value < floorFlatRange.value) { 
+    floorFlatRange.value = floorHouseRange.value;
+    floorFlatNumber.value = floorFlatRange.value;
+  };
+  console.log(floorHouseRange.min);
+  floorFlatRange.style.backgroundSize = (floorFlatRange.value - floorFlatRange.min) * 100 / (floorFlatRange.max - floorFlatRange.min) + '% 100%';
 };
+floorsHouseNumber.onchange = function() {
+  floorsHouseNumber.value = floorHouseRange.value;
+};
+floorFlatRange.onchange = function() {
+  floorFlatRange.value = floorFlatNumber.value;
+};
+floorFlatNumber.onchange = function() {
+  floorFlatNumber.value = floorFlatRange.value;
+};
+
+
+// А потом делай валидацию.
+// При нажатии "УЗНАТЬ стоимость" нужно проверить форму и вывести соответствующие сообщения под полями с ошибками.
+let form = document.forms.formOrange; // находим форму
+
+let checkItem = document.querySelectorAll('price__submitcheck'); // инпуты с вводом текста
+let radio = form.elements.radiocheck;
+let radioStyled = document.getElementsByClassName('price__check');
+
+form.addEventListener('submit', validate); // ставим обработчик отправки формы
+
+function validate(event) {
+  event.preventDefault(); // отмена стандартной отправки
+  let radioAnchor;
+  for (i = 0; i < radio.length; i++) {
+    
+    if (radio[i].checked) {      
+      radioAnchor = true;
+    }  
+  }
+if (radioAnchor != true) {
+  console.log("введите значение");
+  radio.forEach(elem => elem.classList.add('price__check_red'));
+}
+  
+};
+
+// Рамочку там красную для поля с ошибкой, анимацию появления ошибки и т.д.
+
+// А потом отправить письмо на сервер как уже делали )

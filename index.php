@@ -6,7 +6,7 @@
 ?>
 <body>
     <div class="wrap__100">
-       <form action="get" class="price">
+       <form action="get" class="price" name = "formOrange">
            <h1 class="price__h1">Узнайте самую выгодную стоимость своей квартиры через <span class="price__h1_red">онлайн—калькулятор!</span> </h1>
            <div class="price__wrap">
                <div class="price__wraprow">
@@ -47,7 +47,7 @@
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Улица</p>
-                   <input type="text" class="price__input">
+                   <input type="text" class="price__input price__submitcheck">
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Тип недвижимости</p>  
@@ -162,27 +162,27 @@
                </div>                     
                <div class="price__wraprow">
                    <p class="price__p">Ваш телефон</p>
-                   <input type="tel" class="tel price__input">
+                   <input type="tel" class="tel price__input price__submitcheck">
                </div>
                <div class="price__wraprow price__wraprow_start">
                    <p class="price__p">Уведомление</p>
                    <div class="price__call">
-                       <input name="contact"  class="price__check" type="radio" id="call" >
+                       <input name="radiocheck"  class="price__check" type="radio" id="call" >
                        <label class="price__label" for="call">Звонок</label>
-                       <input name="contact"  class="price__check" type="radio" id="sms" >
+                       <input name="radiocheck"  class="price__check" type="radio" id="sms" >
                        <label class="price__label" for="sms">SMS</label>
                    </div>
                </div>
            </div>
            <div class="price__button_wrap">
-                <button class="price__button">УЗНАТЬ стоимость</button>
+                <input type="submit" class="price__button" value = "УЗНАТЬ стоимость">
             </div>
         </form>
     </div>    
     <div class="price__wrap_main">
         <h1 class="price__h1 price__h1_nopad">Выберите программу и рассчитайте условия</h1>
         <div class="wrap__40">
-           <form action="get" class="price price_gray">
+           <form action="#" method = "get" class="price price_gray">
                <div class="price__wrap">
                     <div class="price__wraprow price__wraprow_yellow">
                         <p class="price__p">Цель кредита</p>  
