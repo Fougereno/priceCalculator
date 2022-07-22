@@ -115,32 +115,75 @@ floorFlatNumber.onchange = function() {
 };
 
 
-// А потом делай валидацию.
 // При нажатии "УЗНАТЬ стоимость" нужно проверить форму и вывести соответствующие сообщения под полями с ошибками.
 let form = document.forms.formOrange; // находим форму
-
-let checkItem = document.querySelectorAll('price__submitcheck'); // инпуты с вводом текста
+let textInput = document.querySelectorAll(".price__submitcheck"); // инпуты с вводом текста
+console.log(textInput);
 let radio = form.elements.radiocheck;
 let radioStyled = document.getElementsByClassName('price__check');
 
 form.addEventListener('submit', validate); // ставим обработчик отправки формы
-
+const answerdiv = document.querySelector('.js-answer');
+let html = '';
 function validate(event) {
   event.preventDefault(); // отмена стандартной отправки
-  let radioAnchor;
+  // проверка инпутов с вводом текста     
+  textInput.forEach((input) => {
+    input.addEventListener("blur", addred);
+    input.addEventListener("focus", removered);
+    if (input.value == "") {
+      input.classList.add('price_red');
+      input.placeholder = "поле должно быть заполнено";
+    } 
+  } );
+  // проверка radio инпута
+  let radioAnchor; 
   for (i = 0; i < radio.length; i++) {
     
     if (radio[i].checked) {      
       radioAnchor = true;
     }  
   }
-if (radioAnchor != true) {
-  console.log("введите значение");
-  radio.forEach(elem => elem.classList.add('price__check_red'));
-}
+  if (radioAnchor != true) {
+    radio.forEach(elem => { 
+      elem.classList.add('price_red');
+    });
+  }
+
+  // А потом отправить письмо на сервер как уже делали )
+    
+    let request = new XMLHttpRequest();
+    request.onreadystatechange = function() { 
+      console.log("readyState=", this.readyState, "status=", this.status);
+      if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {  
+          console.log(this);
+          html += (request.responseText);      
+          answerdiv.innerHTML = html; 
+          html = '';        
+      }
+    }    
+    request.open(this.method, this.action, true);
+    let data = new FormData(this);
+    for (let key of data.keys())
+      console.log(key, data.get(key));      
+    request.send(data);
+          form.reset(); 
+    
   
 };
 
-// Рамочку там красную для поля с ошибкой, анимацию появления ошибки и т.д.
+function addred() {
+  if (this.value == ('')) { 
+    this.classList.add('price_red');
+    this.placeholder = "поле должно быть заполнено"
+  }};
 
-// А потом отправить письмо на сервер как уже делали )
+function removered() { 
+    if (this.classList.contains('price_red')) {
+      this.classList.remove('price_red');
+      this.placeholder = "";
+    }
+    };
+
+
+    

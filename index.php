@@ -6,7 +6,7 @@
 ?>
 <body>
     <div class="wrap__100">
-       <form action="get" class="price" name = "formOrange">
+       <form name = "formOrange" class="price js-form main__form" action="send.php"  method="post" >
            <h1 class="price__h1">Узнайте самую выгодную стоимость своей квартиры через <span class="price__h1_red">онлайн—калькулятор!</span> </h1>
            <div class="price__wrap">
                <div class="price__wraprow">
@@ -47,7 +47,7 @@
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Улица</p>
-                   <input type="text" class="price__input price__submitcheck">
+                   <input class="main__input js-input price__input price__submitcheck"  name="street" type="text" >
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Тип недвижимости</p>  
@@ -162,7 +162,7 @@
                </div>                     
                <div class="price__wraprow">
                    <p class="price__p">Ваш телефон</p>
-                   <input type="tel" class="tel price__input price__submitcheck">
+                   <input name="phone" type="tel" class="tel price__input price__submitcheck">
                </div>
                <div class="price__wraprow price__wraprow_start">
                    <p class="price__p">Уведомление</p>
@@ -177,7 +177,9 @@
            <div class="price__button_wrap">
                 <input type="submit" class="price__button" value = "УЗНАТЬ стоимость">
             </div>
+            <h1 class="js-answer"></h1>
         </form>
+        <h1 class="js-answer"></h1>
     </div>    
     <div class="price__wrap_main">
         <h1 class="price__h1 price__h1_nopad">Выберите программу и рассчитайте условия</h1>
