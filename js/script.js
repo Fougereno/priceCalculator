@@ -154,7 +154,6 @@ function validate(event) {
     
     let request = new XMLHttpRequest();
     request.onreadystatechange = function() { 
-      console.log("readyState=", this.readyState, "status=", this.status);
       if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {  
           
           html += (request.responseText);      
