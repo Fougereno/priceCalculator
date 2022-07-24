@@ -177,9 +177,8 @@
            <div class="price__button_wrap">
                 <input type="submit" class="price__button" value = "УЗНАТЬ стоимость">
             </div>
-            <h1 class="js-answer"></h1>
         </form>
-        <h1 class="js-answer"></h1>
+        <h1 class="price__h1 js-answer"></h1>
     </div>    
     <div class="price__wrap_main">
         <h1 class="price__h1 price__h1_nopad">Выберите программу и рассчитайте условия</h1>

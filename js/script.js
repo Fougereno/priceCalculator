@@ -126,7 +126,7 @@ form.addEventListener('submit', validate); // ставим обработчик 
 const answerdiv = document.querySelector('.js-answer');
 let html = '';
 function validate(event) {
-  event.preventDefault(); // отмена стандартной отправки
+  // event.preventDefault(); // отмена стандартной отправки
   // проверка инпутов с вводом текста     
   textInput.forEach((input) => {
     input.addEventListener("blur", addred);
@@ -156,7 +156,7 @@ function validate(event) {
     request.onreadystatechange = function() { 
       console.log("readyState=", this.readyState, "status=", this.status);
       if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {  
-          console.log(this);
+          
           html += (request.responseText);      
           answerdiv.innerHTML = html; 
           html = '';        
