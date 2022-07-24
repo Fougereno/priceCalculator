@@ -126,7 +126,7 @@ form.addEventListener('submit', validate); // ставим обработчик 
 const answerdiv = document.querySelector('.js-answer');
 let html = '';
 function validate(event) {
-  // event.preventDefault(); // отмена стандартной отправки
+  event.preventDefault(); // отмена стандартной отправки
   // проверка инпутов с вводом текста     
   textInput.forEach((input) => {
     input.addEventListener("blur", addred);
