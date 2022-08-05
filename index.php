@@ -177,7 +177,7 @@
                </div>
                <div class="price__wraprow">
                    <p class="price__p">Ваш телефон</p>
-                   <input name="phone" type="tel" class="tel price__input price__submitcheck">
+                   <input name="phone" type="tel" class="tel price__input price__submitcheck" placeholder="+7(___) ___-__-__">
                </div>
                <div class="price__wraprow price__wraprow_start">
                    <p class="price__p">Уведомление</p>
